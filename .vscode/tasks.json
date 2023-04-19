@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Server build",
+        "command": "<<processing-javaのpath>>",
+        "type": "process",
+        "args": [
+          "--force",
+          "--sketch=<<フォルダのpath>>/serverCanvas",
+          "--run"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        }
+      },
+      {
+        "label": "Client build",
+        "command": "<<processing-javaのpath>>",
+        "type": "process",
+        "args": [
+          "--force",
+          "--sketch=<<フォルダのpath>>/clientCanvas",
+          "--run"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        }
+      }
+    ]
+  }
